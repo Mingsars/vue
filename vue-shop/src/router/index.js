@@ -5,18 +5,35 @@ import List from '../components/List.vue'
 import Shop from '../components/Shop.vue'
 import User from '../components/User.vue'
 import Detail from '../components/Detail.vue'
+import ListItem from '../components/ListItem.vue'
 
 Vue.use(Router)
 
 export default new Router({
   routes: [
     {
+      path : '/',
+      redirect : 'home',
+      component : Home
+    },
+    {
       path : '/home',
       component : Home
     },
     {
       path : '/list',
-      component : List
+      component : List,
+      children : [
+        {
+          path : '/list',
+          redirect : '/list/listitem/hot',
+          component : ListItem
+        },
+        {
+          path: '/list/listitem/:id',
+          component : ListItem
+        }
+      ]
     },
     {
       path : '/shop',

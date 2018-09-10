@@ -148,6 +148,7 @@
         height: 20px;
         line-height: 20px;
         margin-top: 5px;
+        font-size: 14px;
     }
     .hotNews .hotNews-box{
         flex: 1;
@@ -163,7 +164,7 @@
     }
     .seckill-title{
         display: flex;
-        width: 60%;
+        /* width: 60%; */
         font-size: 14px;
         padding-top:5px; 
     }
@@ -175,6 +176,7 @@
     .seckill-title span:first-child{
         color: #f23030;
         font-size: 26px;
+        width: 30%;
     }
     .seckill-title span:last-child{
         width: 30%;
@@ -191,7 +193,7 @@
         width: 660px;
     }
     .seckill-content-box .seckill-content-box-item{
-        width: 110px;
+        width: 115px;
         padding: 0 5px;
     }
     .seckill-content-box .seckill-content-box-item p{

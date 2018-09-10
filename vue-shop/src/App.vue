@@ -26,4 +26,5 @@ body{
   background: #eee;
 }
 img{width: 100%;}
+input{border: none;outline: none;}
 </style>
