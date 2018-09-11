@@ -22,3 +22,8 @@ export let getSecKills = () => {
 export let getShopItems = () => {
 	return axios.get('/shopItem');
 }
+
+//获取列表页数据
+export let getListItems = () => {
+	return axios.get('/listItem');
+}

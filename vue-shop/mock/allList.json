@@ -1,0 +1,292 @@
+[
+    {
+        "id" : 1,
+        "title" : "热门推荐",
+        "listbox" : [
+            {
+                "listBoxTitle" : "热门分类",
+                "lists" : [
+                    {
+                        "listImg" : "https://img11.360buyimg.com/focus/s140x140_jfs/t21388/146/237407622/26923/221da1b3/5b054fedN2ba90518.jpg",
+                        "listIntro" : "手机"
+                    },
+                    {
+                        "listImg" : "https://img20.360buyimg.com/focus/s140x140_jfs/t20128/208/216721929/9242/472993da/5b05522dNa2aae1bb.png",
+                        "listIntro" : "耳机"
+                    },
+                    {
+                        "listImg" : "https://img30.360buyimg.com/focus/s140x140_jfs/t21655/83/2186874549/15932/c273d29b/5b48802aN13fe73de.png",
+                        "listIntro" : "剃须刀"
+                    },
+                    {
+                        "listImg" : "https://img20.360buyimg.com/focus/s140x140_jfs/t21715/149/246679831/16257/ddbf2036/5b0565a7N8dbc0017.png",
+                        "listIntro" : "路由器"
+                    },
+                    {
+                        "listImg" : "https://img14.360buyimg.com/focus/s140x140_jfs/t1/4478/16/633/36008/5b923503E39b9dfa9/13b099f187576d8c.png",
+                        "listIntro" : "月饼"
+                    },
+                    {
+                        "listImg" : "https://img10.360buyimg.com/focus/s140x140_jfs/t1/1410/32/643/38009/5b9236b2Eb02fbf02/1e7de6987578dcdd.jpg",
+                        "listIntro" : "牛奶"
+                    },
+                    {
+                        "listImg" : "https://img11.360buyimg.com/focus/s140x140_jfs/t21388/146/237407622/26923/221da1b3/5b054fedN2ba90518.jpg",
+                        "listIntro" : "男士内裤"
+                    },
+                    {
+                        "listImg" : "https://img20.360buyimg.com/focus/s140x140_jfs/t1/1710/26/666/26147/5b9236c3E5fd1cd42/86c6bca8f4fe1efa.png",
+                        "listIntro" : "小米8"
+                    },
+                    {
+                        "listImg" : "https://img11.360buyimg.com/focus/s140x140_jfs/t1/3653/6/655/42593/5b9236caEfef6235b/9e118f12705f52bb.png",
+                        "listIntro" : "大闸蟹"
+                    },
+                    {
+                        "listImg" : "https://img20.360buyimg.com/focus/s140x140_jfs/t23881/349/2204372862/9923/4c62864a/5b7693eeNf6883734.png",
+                        "listIntro" : "三只松鼠"
+                    },
+                    {
+                        "listImg" : "https://img20.360buyimg.com/focus/s140x140_jfs/t24253/294/2182777138/4059/429945c9/5b76990bNde226fbc.png",
+                        "listIntro" : "充电宝"
+                    },
+                    {
+                        "listImg" : "https://img30.360buyimg.com/focus/s140x140_jfs/t22051/318/235303191/9297/c5ea2761/5b055000N410a7553.png",
+                        "listIntro" : "空调"
+                    },
+                    {
+                        "listImg" : "https://img10.360buyimg.com/focus/s140x140_jfs/t19960/243/653029866/38879/91bb398b/5b055555N9245f8aa.jpg",
+                        "listIntro" : "电饭煲"
+                    },
+                    {
+                        "listImg" : "https://img12.360buyimg.com/focus/s140x140_jfs/t1/345/33/944/5582/5b9236d2E62d8da2e/99f72d51b8f195ed.jpg",
+                        "listIntro" : "电话手表"
+                    },
+                    {
+                        "listImg" : "https://img30.360buyimg.com/focus/s140x140_jfs/t1/1446/14/631/8500/5b9237e5E0d1f9e16/b1a627b92323b5ed.png",
+                        "listIntro" : "华为"
+                    }    
+                ]
+            },
+            {
+                "listBoxTitle" : "家电热搜",
+                "lists" : [
+                    {
+                        "listImg" : "https://img20.360buyimg.com/focus/s140x140_jfs/t21115/83/225125274/13856/5473fb3f/5b0567c1N59d53b27.png",
+                        "listIntro" : "冰箱"
+                    },
+                    {
+                        "listImg" : "https://img14.360buyimg.com/focus/s140x140_jfs/t21664/15/237213959/24996/a3c6c7d6/5b0567c7N9cc1c355.png",
+                        "listIntro" : "洗衣机"
+                    },
+                    {
+                        "listImg" : "https://img12.360buyimg.com/focus/s140x140_jfs/t18106/218/2672347202/29951/3618e960/5b0567cdN275fbcdd.png",
+                        "listIntro" : "电视"
+                    }    
+                ]
+            },
+            {
+                "listBoxTitle" : "热卖手机",
+                "lists" : [
+                    {
+                        "listImg" : "https://img30.360buyimg.com/focus/s140x140_jfs/t16333/58/1091559738/36108/3a56903e/5a4f4872Ndb69555f.png",
+                        "listIntro" : "华为手机"
+                    },
+                    {
+                        "listImg" : "https://img20.360buyimg.com/focus/s140x140_jfs/t16366/16/1307996090/39842/dbaa3c73/5a4f4867Ncb588473.png",
+                        "listIntro" : "小米手机"
+                    },
+                    {
+                        "listImg" : "https://img30.360buyimg.com/focus/s140x140_jfs/t14245/137/2069922478/30524/1e8fc597/5a69d582N25086304.png",
+                        "listIntro" : "苹果"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id" : 2,
+        "title" : "手机数码",
+        "listbox" : []
+    },
+    {
+        "id" : 3,
+        "title" : "家用电器",
+        "listbox" : []
+    },
+    {
+        "id" : 4,
+        "title" : "电脑办公",
+        "listbox" : []
+    },
+    {
+        "id" : 5,
+        "title" : "计生情趣",
+        "listbox" : []
+    },
+    {
+        "id" : 6,
+        "title" : "美妆护肤",
+        "listbox" : []
+    },
+    {
+        "id" : 7,
+        "title" : "个护清洁",
+        "listbox" : []
+    },
+    {
+        "id" : 8,
+        "title" : "汽车用品",
+        "listbox" : []
+    },
+    {
+        "id" : 9,
+        "title" : "京东超市",
+        "listbox" : []
+    },
+    {
+        "id" : 10,
+        "title" : "男装",
+        "listbox" : []
+    },
+    {
+        "id" : 11,
+        "title" : "男鞋",
+        "listbox" : []
+    },
+    {
+        "id" : 12,
+        "title" : "女装",
+        "listbox" : []
+    },
+    {
+        "id" : 13,
+        "title" : "女鞋",
+        "listbox" : []
+    },
+    {
+        "id" : 14,
+        "title" : "母婴童装",
+        "listbox" : []
+    },
+    {
+        "id" : 15,
+        "title" : "图书音像",
+        "listbox" : []
+    },
+    {
+        "id" : 16,
+        "title" : "运动户外",
+        "listbox" : []
+    },
+    {
+        "id" : 17,
+        "title" : "内衣配饰",
+        "listbox" : []
+    },
+    {
+        "id" : 18,
+        "title" : "食品生鲜",
+        "listbox" : []
+    },
+    {
+        "id" : 19,
+        "title" : "酒水饮料",
+        "listbox" : []
+    },
+    {
+        "id" : 20,
+        "title" : "家具家装",
+        "listbox" : []
+    },
+    {
+        "id" : 21,
+        "title" : "家居厨具",
+        "listbox" : []
+    },
+    {
+        "id" : 22,
+        "title" : "箱包手袋",
+        "listbox" : []
+    },
+    {
+        "id" : 23,
+        "title" : "钟表珠宝",
+        "listbox" : []
+    },
+    {
+        "id" : 24,
+        "title" : "玩具乐器",
+        "listbox" : []
+    },
+    {
+        "id" : 25,
+        "title" : "医药保健",
+        "listbox" : []
+    },
+    {
+        "id" : 26,
+        "title" : "宠物生活",
+        "listbox" : []
+    },
+    {
+        "id" : 27,
+        "title" : "礼品鲜花",
+        "listbox" : []
+    },
+    {
+        "id" : 28,
+        "title" : "农资绿植",
+        "listbox" : []
+    },
+    {
+        "id" : 29,
+        "title" : "生活旅行",
+        "listbox" : []
+    },
+    {
+        "id" : 30,
+        "title" : "奢侈品",
+        "listbox" : []
+    },
+    {
+        "id" : 31,
+        "title" : "全球购",
+        "listbox" : []
+    },
+    {
+        "id" : 32,
+        "title" : "艺术邮币",
+        "listbox" : []
+    },
+    {
+        "id" : 33,
+        "title" : "二手商品",
+        "listbox" : []
+    },
+    {
+        "id" : 34,
+        "title" : "特产馆",
+        "listbox" : []
+    },
+    {
+        "id" : 35,
+        "title" : "京东金融",
+        "listbox" : []
+    },
+    {
+        "id" : 36,
+        "title" : "国际品牌",
+        "listbox" : []
+    },
+    {
+        "id" : 37,
+        "title" : "拍卖",
+        "listbox" : []
+    },
+    {
+        "id" : 38,
+        "title" : "房产",
+        "listbox" : []
+    }
+]

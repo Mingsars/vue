@@ -44,4 +44,16 @@ http.createServer((req,res) => {
             }
         })
     }
+
+    if(pathname === '/listItem'){
+        fs.readFile('./allList.json',function(err,data){
+            if(err){
+                res.end(err.toString());
+            }else if(data.length == 0){
+                res.end('没有信息');
+            }else{
+                res.end(data);
+            }
+        })
+    }
 }).listen(4000);

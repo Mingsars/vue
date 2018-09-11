@@ -9,7 +9,7 @@
         </header>
         <div class="content">
             <div class="content-body">
-                <Aside></Aside>
+                <Aside :listItems="listItems"></Aside>
                 <router-view></router-view>
             </div>  
         </div>  
@@ -50,13 +50,28 @@
         position: absolute;
         top: 44px;bottom: 60px;
         left: 0;right: 0;
+        background: #fff;
     }
 </style>
 
 <script>
 import Aside from '../base/Aside.vue'
+import {getListItems} from '../api'
 export default {
-    components : {Aside}
+    components : {Aside},
+    created() {
+        this.getListItem();
+    },
+    data(){
+        return{
+            listItems : ''
+        }
+    },
+    methods : {
+        async getListItem(){
+            this.listItems = await getListItems();
+        }
+    }
 }
 </script>
 

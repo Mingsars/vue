@@ -26,12 +26,13 @@ export default new Router({
       children : [
         {
           path : '/list',
-          redirect : '/list/listitem/hot',
+          redirect : '/list/listitem/1',
           component : ListItem
         },
         {
-          path: '/list/listitem/:id',
-          component : ListItem
+          path: 'listitem/:id',
+          component : ListItem,
+          name : 'listName'
         }
       ]
     },
