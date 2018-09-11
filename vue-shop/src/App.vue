@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <router-view></router-view>
-    <Nav></Nav>
+    <Nav v-show="isShow"></Nav>
   </div>
 </template>
 
@@ -10,7 +10,19 @@ import Nav from './base/Nav.vue'
 
 export default {
   name: 'App',
-  components: {Nav}
+  components: {Nav},
+  watch : {
+    $route(){
+      if(this.$route.path == '/detail'){
+        this.isShow = false;
+      }
+    }
+  },
+  data() {
+    return {
+      isShow : true
+    }  
+  }
 }
 </script>
 
@@ -27,4 +39,10 @@ body{
 }
 img{width: 100%;}
 input{border: none;outline: none;}
+body,html{
+  height: 100%;
+}
+#app{
+  height: 100%;
+}
 </style>

@@ -142,7 +142,7 @@
         width: 10%;
     }
     .hotNews span:last-child{
-        width: 8%;
+        width: 10%;
         border-left: 1px solid #ccc;
         text-align: center;
         height: 20px;
