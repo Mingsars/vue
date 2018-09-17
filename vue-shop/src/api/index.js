@@ -32,3 +32,13 @@ export let getListItems = () => {
 export let getAllProducts = () => {
 	return axios.get('/detail');
 }
+
+//添加到购物车
+export let addShop = (data) => {
+	return axios.post('/shop',data);
+}
+
+//获取购物车数据
+export let allShop = () => {
+	return axios.get('/shop');
+}

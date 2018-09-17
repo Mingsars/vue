@@ -10,7 +10,7 @@
                 </div>
             </form>    
         </header>
-        <Swiper :sliders="sliders"></Swiper>
+        <Swiper :sliders="sliders"></Swiper> 
         <div class="block block1">
             <div class="list-link">
                 <router-link to="/list">超市<i class="iconfont icon-JD"></i></router-link>
@@ -36,7 +36,9 @@
                 <div class="seckill-title">
                     <span>秒杀专场</span>
                     <span>16点场</span>
-                    <span><Seckill :hour="secKill.secKillTime"></Seckill></span>    
+                    <span>
+                        <Seckill :hour="secKill.secKillTime"></Seckill>
+                    </span>    
                 </div> 
                 <div class="seckill-content">
                     <ul class="seckill-content-box">
@@ -49,7 +51,7 @@
                         </li>
                     </ul>
                 </div>   
-            </div> 
+            </div>
             <ShopItem v-for="(item,index) in ShopItem" :key="index" :item="item"></ShopItem>    
         </div> 
     </div>

@@ -25,6 +25,10 @@
         font-size: 14px;
         text-align: center;
     }
+    .router-link-exact-active{
+        background: #ccc !important;
+        color: #f23030 !important
+    }
 </style>
 
 <script>

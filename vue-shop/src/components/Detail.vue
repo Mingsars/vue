@@ -23,13 +23,13 @@
             {{productMsg.curPrice | money}}
         </div>
         <div class="buttons">
-            <span>加入购物车</span>
+            <span @click="addToShop">加入购物车</span>
             <span>立即购买</span>
         </div>
     </div>
 </template>
 <script>
-import {getAllProducts} from '../api'
+import {getAllProducts,addShop} from '../api'
 export default {
     filters:{
         money(val){
@@ -54,6 +54,9 @@ export default {
         },
         back(){
             this.$router.go(-1);
+        },
+        async addToShop(){
+            await addShop(JSON.stringify(this.productMsg));
         }
     },
     watch : {
