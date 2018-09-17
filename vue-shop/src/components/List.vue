@@ -1,7 +1,7 @@
 <template>
     <div>
         <header>
-            <span><i class="iconfont icon-fanhui"></i></span>
+            <span @click="back"><i class="iconfont icon-fanhui"></i></span>
             <form action="">
                 <i class="iconfont icon-sousuo"></i>
                 <input type="text" placeholder="搜索">
@@ -70,6 +70,9 @@ export default {
     methods : {
         async getListItem(){
             this.listItems = await getListItems();
+        },
+        back(){
+            this.$router.go(-1);
         }
     }
 }

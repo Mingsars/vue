@@ -6,6 +6,7 @@ import Shop from '../components/Shop.vue'
 import User from '../components/User.vue'
 import Detail from '../components/Detail.vue'
 import ListItem from '../components/ListItem.vue'
+import Regist from '../components/Regist.vue'
 
 Vue.use(Router)
 
@@ -45,8 +46,13 @@ export default new Router({
       component : User
     },
     {
-      path : '/detail',
-      component : Detail
+      path : '/detail/:num',
+      component : Detail,
+      name : 'productDetail'
+    },
+    {
+      path : '/regist',
+      component : Regist
     }
   ]
 })

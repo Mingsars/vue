@@ -27,3 +27,8 @@ export let getShopItems = () => {
 export let getListItems = () => {
 	return axios.get('/listItem');
 }
+
+//获取所有商品
+export let getAllProducts = () => {
+	return axios.get('/detail');
+}

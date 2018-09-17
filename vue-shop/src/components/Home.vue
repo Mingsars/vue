@@ -41,11 +41,11 @@
                 <div class="seckill-content">
                     <ul class="seckill-content-box">
                         <li class="seckill-content-box-item" v-for="(secKillItem,index) in secKill.secKillItems" :key="index">
-                            <a href="">
+                            <router-link :to="{name:'productDetail',params:{num : secKillItem.id}}">
                                 <img :src="secKillItem.imgUrl" alt="">
                                 <p class="curPrice">{{secKillItem.curPrice | money}}</p>
                                 <p class="prevPrice">{{secKillItem.prevPrice | money}}</p>
-                            </a>
+                            </router-link>
                         </li>
                     </ul>
                 </div>   
@@ -176,7 +176,7 @@
     .seckill-title span:first-child{
         color: #f23030;
         font-size: 26px;
-        width: 30%;
+        width: 35%;
     }
     .seckill-title span:last-child{
         width: 30%;
@@ -240,7 +240,7 @@ export default {
             sliders : [
                 ],
             hotNews : [
-                '劲爆消息1',
+                '劲爆消息11111111',
                 '劲爆消息2',
                 '劲爆消息3',
                 '劲爆消息4',

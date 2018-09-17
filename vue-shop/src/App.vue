@@ -13,7 +13,7 @@ export default {
   components: {Nav},
   watch : {
     $route(){
-      if(this.$route.path == '/detail'){
+      if(this.$route.path.indexOf('/detail')!= -1){
         this.isShow = false;
       }
     }

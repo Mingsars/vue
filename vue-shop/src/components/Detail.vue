@@ -1,18 +1,18 @@
 <template>
     <div class="detail">
         <div class="detail-head">
-            <span class="back"><i class="iconfont icon-fanhui"></i></span>
+            <span class="back" @click="back"><i class="iconfont icon-fanhui"></i></span>
             <p class="detail-title">
                 商品
             </p>
         </div>
         <div class="detailimg">
-            <img src="https://m.360buyimg.com/mobilecms/s750x750_jfs/t26098/84/777424326/521562/bf1653e/5b7bba0dNa5115c33.jpg!q80.dpg.webp" alt="">
+            <img :src="productMsg.imgUrl">
         </div>
         <div class="detail-intro">
             <span class="detail-intro-left detail-span">
-                <span class="tag">自营</span>
-                华为 HUAWEI P20  AI智慧全面屏 6GB +64GB 极光闪蝶色 全网通版 移动联通电信4G手机 双卡双待
+                <span class="tag">{{productMsg.tag}}</span>
+                {{productMsg.intro}}
             </span>
             <span class="detail-intro-right detail-span">
                 <i class="iconfont icon-like"></i>
@@ -20,7 +20,7 @@
             </span>   
         </div>
         <div class="detail-price">
-            {{price | money}}
+            {{productMsg.curPrice | money}}
         </div>
         <div class="buttons">
             <span>加入购物车</span>
@@ -29,15 +29,36 @@
     </div>
 </template>
 <script>
+import {getAllProducts} from '../api'
 export default {
     filters:{
         money(val){
             return '￥' + val;
         }
     },
+    created() {
+        this.productId = (+this.$route.params.num);
+        this.getAllProduct();   
+    },
     data(){
         return{
-            price : 3388
+            productId : 0,
+            productMsg : ''
+        }
+    },
+    methods : {
+        async getAllProduct(){
+            var newData = '';
+            newData = await getAllProducts();
+            this.productMsg = newData[this.productId - 1];     
+        },
+        back(){
+            this.$router.go(-1);
+        }
+    },
+    watch : {
+        $route(){
+            this.productId = this.$route.params.ProductId;
         }
     }
 }

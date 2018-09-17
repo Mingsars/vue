@@ -1,0 +1,26 @@
+[
+    {
+        "id" : 1,
+        "tag" : "自营",
+        "prevPrice" : 3388,
+        "curPrice" : 3388,
+        "intro" : "华为 HUAWEI P20  AI智慧全面屏 6GB +64GB 极光闪蝶色 全网通版 移动联通电信4G手机 双卡双待",
+        "imgUrl" : "https://m.360buyimg.com/mobilecms/s750x750_jfs/t26098/84/777424326/521562/bf1653e/5b7bba0dNa5115c33.jpg!q80.dpg.webp"
+    },
+    {
+        "id" : 2,
+        "tag" : "京东物流",
+        "prevPrice" : 22.80,
+        "curPrice" : 19.80,
+        "intro" : "闪魔 华为P20/P20 pro钢化膜 高清防爆防指纹抗蓝光手机膜 8D全屏全玻璃防蓝光膜 P20【加强版^电镀双倍抗指纹】送神器*2片装",
+        "imgUrl" : "https://m.360buyimg.com/mobilecms/s750x750_jfs/t17470/206/1939561960/470540/76263ef/5addae26Ncc63b4f7.jpg!q80.dpg.webp"
+    },
+    {
+        "id" : 1,
+        "tag" : "全球购",
+        "prevPrice" : 1319,
+        "curPrice" : 1319,
+        "intro" : "潘多拉（Pandora）手链手镯成品套装套组001 15",
+        "imgUrl" : "https://m.360buyimg.com/mobilecms/s750x750_jfs/t1/5217/13/1872/193042/5b952776Eacb9e122/a3cddae144871857.jpg!q80.dpg"
+    }
+]
