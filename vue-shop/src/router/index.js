@@ -7,6 +7,7 @@ import User from '../components/User.vue'
 import Detail from '../components/Detail.vue'
 import ListItem from '../components/ListItem.vue'
 import Regist from '../components/Regist.vue'
+import Login from '../components/Login.vue'
 
 Vue.use(Router)
 
@@ -53,6 +54,10 @@ export default new Router({
     {
       path : '/regist',
       component : Regist
+    },
+    {
+      path : '/login',
+      component : Login
     }
   ]
 })

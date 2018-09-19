@@ -128,4 +128,51 @@ http.createServer((req,res) => {
                 break;
         }
     }
+
+    if(pathname === '/regist'){
+        let str = '';
+        let user = [];
+        req.on('data',chunk=>{
+            str += chunk;
+        });
+        req.on('end',()=>{
+            readFiles('./user.json',(err,data)=>{
+                if(err){
+                    res.end(err.toString());
+                }else{
+                    user = JSON.parse(data);
+                    user.push(JSON.parse(str));
+                    writeFiles('./user.json',JSON.stringify(user),err=>{
+                        if(err){
+                            throw err;
+                        }else{
+                            res.end(str);
+                        }
+                    })
+                }
+            })
+        })
+    }
+
+    if(pathname === '/login'){
+        let str = '';
+        let user = [];
+        req.on('data',chunk =>{
+            str += chunk;
+            str = JSON.parse(str);
+        })
+        req.on('end',()=>{
+            readFiles('/user.json',(err,data)=>{
+                if(err){
+                    res.end(err.toString());
+                }else if(data.length = 0){
+                    res.end(false);
+                }else{
+                    user = JSON.parse(data);
+                    let flag = user.some(item=> item.username === str.username && item.password === str.password);
+                    res.end(flag);
+                }
+            })
+        });
+    }
 }).listen(4000);

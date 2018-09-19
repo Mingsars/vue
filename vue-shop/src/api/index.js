@@ -42,3 +42,13 @@ export let addShop = (data) => {
 export let allShop = () => {
 	return axios.get('/shop');
 }
+
+//注册用户
+export let registUser = (data) => {
+	return axios.post('/regist',data);
+}
+
+//登录
+export let login = (data) => {
+	return axios.post('/login',data);
+}

@@ -34,9 +34,6 @@ a{text-decoration: none;color: #313131;}
   width: 95%;
   margin: 0 auto;
 }
-body{
-  background: #eee;
-}
 img{width: 100%;}
 input{border: none;outline: none;}
 body,html{

@@ -38,7 +38,7 @@ export default {
     },
     created() {
         this.productId = (+this.$route.params.num);
-        this.getAllProduct();   
+        this.getAllProduct(); 
     },
     data(){
         return{
