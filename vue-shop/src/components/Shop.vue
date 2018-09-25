@@ -15,11 +15,13 @@
                 </div>
             </router-link>
         </ul>
+        <Nav></Nav>
     </div>
 </template>
 
 <script>
 import {allShop} from '../api'
+import Nav from '../base/Nav.vue'
 export default {
     created() {
         this.getAllShop();
@@ -41,7 +43,8 @@ export default {
         money(val){
             return '￥' + val;
         }
-    }
+    },
+    components : {Nav}
 }
 </script>
 <style scoped>

@@ -13,6 +13,7 @@
                 <router-view></router-view>
             </div>  
         </div>  
+        <Nav></Nav>
     </div>
 </template>
 
@@ -55,10 +56,11 @@
 </style>
 
 <script>
+import Nav from '../base/Nav.vue'
 import Aside from '../base/Aside.vue'
 import {getListItems} from '../api'
 export default {
-    components : {Aside},
+    components : {Aside,Nav},
     created() {
         this.getListItem();
     },

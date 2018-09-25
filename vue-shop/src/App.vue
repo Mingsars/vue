@@ -1,28 +1,12 @@
 <template>
   <div id="app">
     <router-view></router-view>
-    <Nav v-show="isShow"></Nav>
   </div>
 </template>
 
 <script>
-import Nav from './base/Nav.vue'
-
 export default {
-  name: 'App',
-  components: {Nav},
-  watch : {
-    $route(){
-      if(this.$route.path.indexOf('/detail')!= -1){
-        this.isShow = false;
-      }
-    }
-  },
-  data() {
-    return {
-      isShow : true
-    }  
-  }
+  name: 'App'
 }
 </script>
 

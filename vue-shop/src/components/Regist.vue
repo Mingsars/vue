@@ -4,6 +4,7 @@
         <div class="body">
             <div class="username"><label for="username">用户名</label><input type="text" placeholder="请输入用户名" id="username" v-model.lazy="userMsg.username"></div>
             <div class="password"><label for="pwd">密码</label><input type="text" placeholder="请输入密码" id="pwd" v-model.lazy="userMsg.password"></div>
+            <div class="nickname"><label for="nickname">昵称</label><input type="text" placeholder="请输入昵称" id="nickname" v-model.lazy="userMsg.nickname"></div>
             <div class="code"><input type="text" placeholder="请输入验证码" v-model.lazy="curCode"><input @click="getCode" type="button" :value="time" class="getCode" :disabled="isClick"></div>
             <div class="submit" @click="regist">注册</div>
         </div>
@@ -91,11 +92,11 @@ export default {
         font-size: 15px;
         height: 32px;
     }
-    .username label,.password label{
+    .username label,.password label,.nickname label{
         width: 20%;
         line-height: 32px;
     }
-    .username input,.password input,.code input{
+    .username input,.password input,.code input,.nickname input{
         width: 75%;
     }
     .code .getCode{

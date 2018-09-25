@@ -53,7 +53,8 @@
                 </div>   
             </div>
             <ShopItem v-for="(item,index) in ShopItem" :key="index" :item="item"></ShopItem>    
-        </div> 
+        </div>
+        <Nav></Nav> 
     </div>
 </template>
 
@@ -219,6 +220,7 @@
 </style>
 
 <script>
+import Nav from '../base/Nav.vue'
 import Swiper from '../base/Swiper.vue'
 import Ads from '../base/Ads.vue'
 import Seckill from '../base/Seckill.vue'
@@ -226,7 +228,7 @@ import ShopItem from '../base/ShopItem.vue'
 import {getSliders,getSecKills, getShopItems} from '../api'
 export default {
     components:{
-        Swiper,Ads,Seckill,ShopItem
+        Swiper,Ads,Seckill,ShopItem,Nav
     },
     created() {
         this.getSlider();

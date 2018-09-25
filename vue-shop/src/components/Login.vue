@@ -8,7 +8,6 @@
                 <router-link to="/regist" tag="div" class="button registBtn">用户注册</router-link>
                 <div class="button loginBtn" @click="userLogin">登录</div>
             </div>
-            
         </div>
     </div> 
 </template>
@@ -34,7 +33,7 @@ export default {
 </script>
 
 <style scoped>
-.body{
+    .body{
         width: 96%;
         margin: 0 auto;
     }

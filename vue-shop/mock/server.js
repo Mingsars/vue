@@ -16,8 +16,9 @@ function writeFiles(fileName,data,cb){
 http.createServer((req,res) => {
     //跨域头
 	res.setHeader("Access-Control-Allow-Origin", "*");
-    res.setHeader("Access-Control-Allow-Headers", "X-Requested-With");
+    // res.setHeader("Access-Control-Allow-Headers", "X-Requested-With");
     res.setHeader("Access-Control-Allow-Methods","PUT,POST,GET,DELETE,OPTIONS");
+    res.setHeader("Access-Control-Allow-Headers", "Content-Type,XFILENAME,XFILECATEGORY,XFILESIZE");
     res.setHeader("X-Powered-By",' 3.2.1')
     res.setHeader("Content-Type", "application/json;charset=utf-8");
 	if(req.method == 'OPTIONS'){return res.end();/*让options请求快速返回*/}
