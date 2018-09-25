@@ -21,12 +21,21 @@ export default {
     },
     data(){
         return{
-            userMsg : {}
+            userMsg : {},
+            flag : false
         }
     },
     methods : {
         async userLogin(){
-            await login(this.userMsg);
+                this.flag = await login(this.userMsg,()=>{
+                this.$store.commit('changeUserMsg',this.userMsg);  
+                if(this.flag = true){
+                    this.$router.push('/user');
+                }else{
+                    alert('账号或密码错误');
+                }   
+            });
+            
         }
     }
 }

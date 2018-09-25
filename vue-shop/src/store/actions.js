@@ -3,6 +3,9 @@ import store from './index.js'
 const actions = {
     changeStatus(store){
         store.commit('changeStatus');
+    },
+    changeUserMsg(store,usermsg){
+        store.commit('changeUsermsg(' + usermsg + ')');
     }
 }
 

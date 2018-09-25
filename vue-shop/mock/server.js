@@ -163,15 +163,15 @@ http.createServer((req,res) => {
             str = JSON.parse(str);
         })
         req.on('end',()=>{
-            readFiles('/user.json',(err,data)=>{
+            readFiles('./user.json',(err,data)=>{
                 if(err){
                     res.end(err.toString());
                 }else if(data.length = 0){
-                    res.end(false);
+                    res.end('false');
                 }else{
                     user = JSON.parse(data);
                     let flag = user.some(item=> item.username === str.username && item.password === str.password);
-                    res.end(flag);
+                    res.end(''+flag);
                 }
             })
         });

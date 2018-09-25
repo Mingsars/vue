@@ -49,6 +49,7 @@ export let registUser = (data) => {
 }
 
 //登录
-export let login = (data) => {
+export let login = (data,cb) => {
+	cb();
 	return axios.post('/login',data);
 }

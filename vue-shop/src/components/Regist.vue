@@ -68,9 +68,7 @@ export default {
             if(this.curCode === this.rightCode){
                 alert('注册成功');
                 await registUser(JSON.stringify(this.userMsg));
-                this.$store._actions.changeStatus[0]();
-                console.log(this.$store);
-                this.$router.push('/home');
+                this.$router.push('/login');
             }
         }
     }
