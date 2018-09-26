@@ -1,9 +1,12 @@
 <template>
     <div class="regist">
-        <Head>注册</Head>
+        <Head>
+            注册
+            <i class="iconfont icon-fanhui" slot="back" @click="back"></i>  
+        </Head>
         <div class="body">
             <div class="username"><label for="username">用户名</label><input type="text" placeholder="请输入用户名" id="username" v-model.lazy="userMsg.username"></div>
-            <div class="password"><label for="pwd">密码</label><input type="text" placeholder="请输入密码" id="pwd" v-model.lazy="userMsg.password"></div>
+            <div class="password"><label for="pwd">密码</label><input type="password" placeholder="请输入密码" id="pwd" v-model.lazy="userMsg.password"></div>
             <div class="nickname"><label for="nickname">昵称</label><input type="text" placeholder="请输入昵称" id="nickname" v-model.lazy="userMsg.nickname"></div>
             <div class="code"><input type="text" placeholder="请输入验证码" v-model.lazy="curCode"><input @click="getCode" type="button" :value="time" class="getCode" :disabled="isClick"></div>
             <div class="submit" @click="regist">注册</div>
@@ -70,6 +73,9 @@ export default {
                 await registUser(JSON.stringify(this.userMsg));
                 this.$router.push('/login');
             }
+        },
+        back(){
+            this.$router.go(-1);
         }
     }
 }

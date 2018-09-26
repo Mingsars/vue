@@ -1,5 +1,5 @@
 const state = {
-    isLogin : 0,
+    isLogin : false,
     userMsg : {
         username : '',
         nickname : ''

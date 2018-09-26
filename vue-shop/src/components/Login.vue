@@ -3,7 +3,7 @@
         <Head>登录</Head>
         <div class="body">
             <div class="username"><label for="username">用户名</label><input type="text" placeholder="请输入用户名" id="username" v-model.lazy="userMsg.username"></div>
-            <div class="password"><label for="pwd">密码</label><input type="text" placeholder="请输入密码" id="pwd" v-model.lazy="userMsg.password"></div>
+            <div class="password"><label for="pwd">密码</label><input type="password" placeholder="请输入密码" id="pwd" v-model.lazy="userMsg.password"></div>
             <div class="buttons">
                 <router-link to="/regist" tag="div" class="button registBtn">用户注册</router-link>
                 <div class="button loginBtn" @click="userLogin">登录</div>
@@ -28,7 +28,9 @@ export default {
     methods : {
         async userLogin(){
                 this.flag = await login(this.userMsg,()=>{
-                this.$store.commit('changeUserMsg',this.userMsg);  
+                this.$store.commit('changeUserMsg',this.userMsg);
+                this.$store.commit('changeStatus');
+                console.log(this.$store.state);
                 if(this.flag = true){
                     this.$router.push('/user');
                 }else{

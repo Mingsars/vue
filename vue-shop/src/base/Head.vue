@@ -1,6 +1,9 @@
 <template>
     <div class="head">
-        <span @click="back"><i class="iconfont icon-fanhui"></i></span>
+        <span>
+            <slot name="back"></slot>
+        </span>
+        <!-- <span @click="back"><i class="iconfont icon-fanhui"></i></span> -->
         <slot>这是一个默认标题</slot>
     </div>
 </template>
