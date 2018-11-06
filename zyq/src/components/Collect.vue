@@ -4,8 +4,8 @@
         <div class="content">
             <div class="container">
                 <ul class="bookBox">
-                    <router-link :to="{name : 'detail',params:{bookId : index}}" tag="li" class="bookBox-item" v-for="(book,index) in books" :key="index">
-                        <img src="../assets/logo.png" alt="">
+                    <router-link :to="{name : 'list',params:{bookId : index}}" tag="li" class="bookBox-item" v-for="(book,index) in books" :key="index">
+                        <img src="../assets/bg1.jpg" alt="">
                         <p>{{book.bookTitle}}</p>
                     </router-link>
                 </ul>
