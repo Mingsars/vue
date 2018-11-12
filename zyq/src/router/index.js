@@ -24,12 +24,12 @@ export default new Router({
       component : Home
     },
     {
-      path : '/list/:bookId',
+      path : '/list/:novelId',
       component : List,
       name : 'list',
     },
     {
-      path : '/detail/:bookId/:pageId',
+      path : '/detail/:novelId/:chapterId',
       component : Detail,
       name : 'detail'
     },

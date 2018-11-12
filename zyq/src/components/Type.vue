@@ -6,7 +6,7 @@
                 <ul class="type-box">
                     <li class="type-item" 
                         :class="{'type-item-active' : !classFlag}"
-                        @click="changeClass()"    
+                        @click="changeClass('','')"    
                     >全部</li>
                     <li class="type-item"
                         v-for="(list,index) in childLists"
@@ -23,10 +23,10 @@
                 <ul class="type-book-box">
                     <router-link class="type-book-item"
                         tag="li"
-                        to=""
+                        :to="{name : 'list',params : {novelId : book.id}}"
                         v-for="book in showBooks"
                         :key="book.id"
-                    >{{book.novel_name}}</router-link>
+                    ><Book :book="book"></Book></router-link>
                 </ul>
             </div>
         </div>
@@ -51,10 +51,14 @@
         box-shadow: inset 0 0 5px #ddd;
         color : #38c;
     }
+    .type-book-item{
+        margin: 15px 0;
+    }
 </style>
 
 <script>
 import Top from '../base/Top.vue'
+import Book from '../base/Book.vue'
 import {getChildList,getListBook} from '../api/index.js'
 export default {
     created(){
@@ -62,14 +66,15 @@ export default {
         this.getChildLists(Id);
         this.getListBooks(Id);
     },
-    components : {Top},
+    components : {Top,Book},
     data(){
         return{
             childLists : [],
             listBooks : [],
             classFlag : '',
+            updateFlag : 0,
             showBooks : [],
-            updateFlag : 0
+            bookClass : ''
         }
     },
     methods : {
@@ -85,20 +90,20 @@ export default {
         changeClass(index,className){
             //修改被点击样式
             this.classFlag = index ? index : '';
-
+            this.bookClass = className;
             this.resultBooks({classFlag : className})
 
         },
         resultBooks(book){  //修改展示的图书数据
             var _book = {   //默认书本信息
-                classFlag : '',
-                updateFlag : 0
+                bookClass : this.bookClass,
+                updateFlag : this.updateFlag
             }
             for(var i in book){     //最终结果书本信息
                 _book[i] = book[i] ? book[i] : _book[i];
             }
 
-            if(_book.classFlag == '' ){     //如果是书本分类为 ‘全部’
+            if(_book.bookClass == '' ){     //如果是书本分类为 ‘全部’
                 if(_book.updateFlag == 0){      //如果连载状态为 ‘全部’
                     this.showBooks = this.listBooks;
                 }else{  
@@ -106,9 +111,9 @@ export default {
                 }
             }else{
                 if(_book.updateFlag == 0){  //如果连载状态为 ‘全部’
-                    this.showBooks = this.listBooks.filter(item => item.class_name == _book.classFlag);
+                    this.showBooks = this.listBooks.filter(item => item.class_name == _book.bookClass);
                 }else{
-                    this.showBooks = this.listBooks.filter(item => item.class_name == _book.classFlag && item.mode == _book.updateFlag);
+                    this.showBooks = this.listBooks.filter(item => item.class_name == _book.bookClass && item.mode == _book.updateFlag);
                 }
             }
         },

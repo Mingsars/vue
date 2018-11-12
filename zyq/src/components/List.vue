@@ -1,34 +1,61 @@
 <template>
     <div class="list">
+        <Top></Top>
         <div class="content">
             <div class="container">
-                <ul class="pageBox">
+                <ul class="page-box">
                     <router-link 
                         v-for="(list,index) in pageLists" :key="index"
-                        :to="{name : 'detail',params : {pageId : index}}"
+                        :to="{name : 'detail',params : {chapterId : index}}"
                         tag="li"
-                    >{{list}}</router-link>
+                        class="page-item"
+                    >{{list.title}}  <span class="chapter-words">{{list.words}}</span>  </router-link>
                 </ul>
             </div>
         </div>
     </div>
 </template>
 
+<style scoped>
+.page-item{
+    padding: 2% 0;
+    border-bottom: 1px solid #ccc;
+    line-height: 23px;
+}
+.page-item:last-child{
+    border-bottom: none;
+}
+.chapter-words{
+    font-size: 12px;
+    display: block;
+    float: right;
+    line-height: 23px;
+}
+</style>
+
 <script>
+import {getBookList} from '../api/index.js'
+import Top from '../base/Top.vue'
 export default {
     created() {
-        this.bookId = this.$route.params.bookId;
+        this.novelId = this.$route.params.novelId;
+        this.getBookLists(this.novelId);
     },
     data(){
         return{
-            bookId : 0,
+            novelId : 0,
             pageLists : [
-                '第一章','第二章','第三章','第四章','第五章','第六章',
-                '第七章','第八章','第九章','第十章','第十一章','第十二章',
-                '第十三章','第十四章','第十五章','第十六章','第十七章','第十八章'
+                
             ]
         }
-    }
+    },
+    methods : {
+        async getBookLists(novelId){
+            var bookData = await getBookList(novelId);
+            this.pageLists = bookData.data.b.data;
+        }
+    },
+    components : {Top}
 }
 </script>
 

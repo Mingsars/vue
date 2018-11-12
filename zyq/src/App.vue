@@ -25,7 +25,7 @@ img{width: 100%;vertical-align: top;}
 }
 .content{
   margin-top: 52px;
-  margin-bottom: 60px;
+  margin-bottom: 64px;
 }
 .container{
   width: 95%;

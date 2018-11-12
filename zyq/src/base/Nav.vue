@@ -10,7 +10,7 @@
 export default {
     data(){
         return{
-            flag : 1
+            isNavShow : true
         }
     }
 }
@@ -24,6 +24,7 @@ export default {
         width: 100%;height: 60px;
         border-top: 1px solid #ccc;
         box-shadow: 0 0 5px #ccc;
+        background: #fff;
     }
     .nav a{
         text-align: center;

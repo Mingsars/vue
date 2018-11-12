@@ -1,5 +1,6 @@
 <template>
     <div class="head">
+        <i class="iconfont icon-left" v-show="isBackShow"></i>
         <slot>默认标题</slot>
     </div>
 </template>
@@ -14,6 +15,22 @@
         font-size: 18px;
         border-bottom: 1px solid #ccc;
         box-shadow: 0 0 5px #ccc;
+        background: #fff;
+    }
+    .iconfont{
+        float: left;
+        margin-left: 2.5%;
     }
 </style>
+
+<script>
+export default {
+    data(){
+        return{
+            isBackShow : false
+        }
+    }
+}
+</script>
+
 
