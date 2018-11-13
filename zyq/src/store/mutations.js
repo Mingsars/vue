@@ -12,6 +12,9 @@ const mutations = {
     hideNavStatus(state){      //隐藏底部tab
         state.isNavShow = false;
     },
+    changeTotalPage(state,n){
+        state.totalPage = n;
+    }
 }
 
 export default mutations;

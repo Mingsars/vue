@@ -1,12 +1,12 @@
 <template>
     <div class="list">
-        <Top></Top>
+        <Top>{{novelName}}</Top>
         <div class="content">
             <div class="container">
                 <ul class="page-box">
                     <router-link 
                         v-for="(list,index) in pageLists" :key="index"
-                        :to="{name : 'detail',params : {chapterId : index}}"
+                        :to="{name : 'detail',params : {chapterId : list.id}}"
                         tag="li"
                         class="page-item"
                     >{{list.title}}  <span class="chapter-words">{{list.words}}</span>  </router-link>
@@ -46,13 +46,19 @@ export default {
             novelId : 0,
             pageLists : [
                 
-            ]
+            ],
+            novelName : '',
+            totalPage : 0
         }
     },
     methods : {
         async getBookLists(novelId){
-            var bookData = await getBookList(novelId);
-            this.pageLists = bookData.data.b.data;
+            var bookData = await getBookList(novelId,2,40);
+            this.pageLists = bookData.data.b.chapter;
+            this.novelName = bookData.data.b.novel.novel_name;
+            this.totalPage = bookData.data.b.page.total;
+            this.$store.commit('changeTotalPage',this.totalPage);   //修改最大页码
+            
         }
     },
     components : {Top}
