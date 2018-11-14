@@ -13,10 +13,14 @@
                 </ul>
             </div>
         </div>
+        <Pages @changePages="changePage" :total="totalPage"></Pages>
     </div>
 </template>
 
 <style scoped>
+.content{
+    margin-bottom: 35px;
+}
 .page-item{
     padding: 2% 0;
     border-bottom: 1px solid #ccc;
@@ -36,10 +40,13 @@
 <script>
 import {getBookList} from '../api/index.js'
 import Top from '../base/Top.vue'
+import Pages from '../base/Pages.vue'
 export default {
     created() {
         this.novelId = this.$route.params.novelId;
         this.getBookLists(this.novelId);
+        this.$store.commit('changeTotalPage',this.totalPage);   //修改最大页数
+        
     },
     data(){
         return{
@@ -53,15 +60,18 @@ export default {
     },
     methods : {
         async getBookLists(novelId){
-            var bookData = await getBookList(novelId,2,40);
+            var bookData = await getBookList(novelId);
             this.pageLists = bookData.data.b.chapter;
             this.novelName = bookData.data.b.novel.novel_name;
             this.totalPage = bookData.data.b.page.total;
-            this.$store.commit('changeTotalPage',this.totalPage);   //修改最大页码
-            
+            this.$store.commit('changeTotalPage',this.totalPage);   //修改最大页码 
+        },
+        async changePage(){     //点击翻页按钮，改变章节列表
+            var bookData = await getBookList(this.novelId,this.$store.state.page);
+            this.pageLists = bookData.data.b.chapter;
         }
     },
-    components : {Top}
+    components : {Top,Pages}
 }
 </script>
 

@@ -6,10 +6,10 @@ import List from '../components/List.vue'
 import User from '../components/User.vue'
 import Detail from '../components/Detail.vue'
 import Type from '../components/Type.vue'
-
+import store from '../store/index.js'
 Vue.use(Router)
-
-export default new Router({
+ 
+var route = new Router({
   routes: [
     {
       path : '/',
@@ -48,3 +48,24 @@ export default new Router({
     }
   ]
 })
+
+route.beforeEach(function(to,from,next){
+  var path = to.path;
+  //判断是否隐藏底部tab
+  //需要隐藏的有：List,Detail
+  if(path.indexOf('list') != -1 || path.indexOf('detail') != -1){
+    store.commit('hideNavStatus');
+  }else{
+    store.commit('showNavStatus');
+  }
+
+  //判断是否显示顶部back按钮
+  //需要显示的有：type,list,detail,
+  if(path.indexOf('type') != -1 || path.indexOf('list') != -1 || path.indexOf('detail') != -1){
+    store.commit('showBackStatus');
+  }else{
+    store.commit('hideBackStatus');
+  }
+  next();
+})
+export default route

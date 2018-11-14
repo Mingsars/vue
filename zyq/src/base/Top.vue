@@ -1,6 +1,6 @@
 <template>
     <div class="head">
-        <i class="iconfont icon-left" v-show="isBackShow"></i>
+        <i class="iconfont icon-left" v-show="$store.state.isBackShow" @click="back"></i>
         <slot>默认标题</slot>
     </div>
 </template>
@@ -28,6 +28,11 @@ export default {
     data(){
         return{
             isBackShow : false
+        }
+    },
+    methods : {
+        back(){
+            this.$router.go(-1);
         }
     }
 }

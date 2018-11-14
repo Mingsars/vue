@@ -14,6 +14,16 @@ const mutations = {
     },
     changeTotalPage(state,n){
         state.totalPage = n;
+    },
+    nextPage(state){
+        var maxPage = state.totalPage % 20;
+        state.page < maxPage ? state.page++ : '';
+    },
+    prevPage(state){
+        state.page >=2 ? state.page-- : '';
+    },
+    jumpPage(state,n){
+        state.page = n;
     }
 }
 

@@ -23,7 +23,9 @@ export let getListBook = (classId) => {
 //获取小说章节列表
 //传入小说ID
 export let getBookList = (novelId,page,pageSize) => {
-    return axios.get('/book/Chapter/list',{params : {novelId : novelId,page : page,pageSize : pageSize}});
+    var _pageSize = pageSize ? pageSize : 20;
+    var _page = page ? page : 1;
+    return axios.get('/book/Chapter/list',{params : {novelId : novelId,page : _page,pageSize : _pageSize}});
 }
 
 //获取小说章节内容
