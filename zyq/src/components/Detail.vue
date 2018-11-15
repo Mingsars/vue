@@ -79,12 +79,10 @@ export default {
         },
         showTop(){
            clearTimeout(this.timer2);
-           console.log(2);
            var that = this;
            this.timer2 = setTimeout(()=>{
                that.isShow  = window.scrollY < that.scroll ? true : false;
                that.scroll = window.scrollY;
-               console.log(1)
                clearTimeout(that.timer2);
            },1000)
         }
